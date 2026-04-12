@@ -1,0 +1,62 @@
+/* Footer.css */
+
+.site-footer {
+    width: 100%;
+    padding: 40px 0;
+    margin-top: auto; /* Ensures it stays at bottom of flex layouts */
+    
+    /* Using your Header glassmorphism colors */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    
+    /* Matching your header's subtle border style */
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between; /* Links on one side, copy on the other */
+    align-items: center;
+  }
+  
+  .footer-copy {
+    color: #1d1d1f; /* Your modern dark grey */
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: #1d1d1f;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+  }
+  
+  /* Subtle hover matching the clean aesthetic */
+  .footer-link:hover {
+    opacity: 0.6;
+  }
+  
+  /* Mobile Tweaks */
+  @media (max-width: 600px) {
+    .footer-container {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+  

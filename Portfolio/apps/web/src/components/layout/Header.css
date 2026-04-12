@@ -1,0 +1,85 @@
+/* The wrapper that sticks to the top */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: none; /* Allows clicking content 'behind' the header gaps */
+    padding: 0; 
+  }
+  
+  /* The actual Nav bar */
+  .pill-nav {
+    pointer-events: auto; /* Re-enables clicking for the nav itself */
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers links */
+    gap: 20px; /* Space between your links */
+    
+    /* Initial glass look */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    
+    /* The Magic: Scroll Animation */
+    animation: make-pill linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Link Styling */
+  .nav-link {
+    text-decoration: none;
+    color: #1d1d1f; /* Modern dark grey */
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 100px;
+    transition: all 0.2s ease;
+  }
+  
+  /* Subtle hover background for links */
+  .nav-link:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  /* "Eytan's Portfolio" - The first link acts as the brand/logo */
+  .nav-link:first-child {
+    font-weight: 700;
+    margin-right: auto; /* Pushes the rest of the links to the right */
+    margin-left: 20px;
+  }
+  
+  /* THE PILL TRANSFORMATION */
+  @keyframes make-pill {
+    to {
+      width: 90%;
+      max-width: 700px; /* Adjust this to fit your link count */
+      height: 54px;
+      margin-top: 15px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.06),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    }
+  }
+  
+  /* Mobile Tweaks */
+  @media (max-width: 600px) {
+    .nav-link:not(:first-child) {
+      display: none; /* Hide extra links on tiny screens or use a burger menu */
+    }
+    .nav-link:first-child {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  
