@@ -97,3 +97,21 @@
         grid-template-columns: 1fr;
     }
 }
+
+.projects-link {
+    display: inline-block;
+    width: fit-content;
+    margin: 28px auto 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0038b8;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    padding: 10px 14px;
+}
+
+.projects-link:hover {
+    color: #0030a0;
+    border-bottom-color: #0038b8;
+}

@@ -1,0 +1,68 @@
+.tech-stack {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 48px 20px 36px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .tech-stack h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #1d1d1f;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  
+  .tech-stack-intro {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    font-weight: 400;
+    color: #515154;
+    max-width: 620px;
+    line-height: 1.7;
+    margin: 0 auto 22px;
+  }
+  
+  .tech-stack-groups {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 18px;
+    max-width: 720px;
+  
+    display: grid;
+    gap: 12px;
+  }
+  
+  .tech-stack-groups li {
+    background: #f5f5f7;               /* matches FeaturedProjects section bg */
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: #1d1d1f;
+    text-align: left;
+  }
+  
+  .tech-stack-groups strong {
+    color: #0038b8;                    /* your accent blue */
+    font-weight: 700;
+  }
+  
+  .tech-stack-learning {
+    margin: 0 auto;
+    max-width: 720px;
+    font-size: 0.95rem;
+    color: #86868b;                    /* matches Hero paragraph tone */
+  }
+  
+  .tech-stack-learning strong {
+    color: #1d1d1f;
+  }
+  
+  @media (max-width: 768px) {
+    .tech-stack {
+      padding: 36px 30px 28px;
+    }
+  
+    .tech-stack-groups li {
+      text-align: center;              /* reads nicer on narrow screens */
+    }
+  }

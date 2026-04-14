@@ -1,17 +1,24 @@
 import "./FeaturedProjects.css"
+import { Link } from "react-router-dom"
 
 const projects = [
     {
-        title: "DevLog",
-        description: "A personal developer journal app to track daily coding progress and goals.",
-        tags: ["React", "TypeScript", "Firebase"],
-        github: "#"
+        "title": "DevLog",
+        "description": "A personal developer journal app to track daily coding progress and goals.",
+        "tags": ["React", "TypeScript", "Firebase"],
+        "github": "#"
     },
     {
-        title: "PathFinder",
-        description: "A graph algorithm visualizer that animates BFS and DFS step by step.",
-        tags: ["React", "TypeScript", "CSS Grid"],
-        github: "#"
+        "title": "PathFinder",
+        "description": "A graph algorithm visualizer that animates BFS and DFS step by step.",
+        "tags": ["React", "TypeScript", "CSS Grid"],
+        "github": "#"
+    },
+    {
+        "title": "MatrixLab",
+        "description": "An interactive linear algebra tool for visualizing matrix operations, eigenvalues, and transformations in real time.",
+        "tags": ["React", "TypeScript", "D3.js"],
+        "github": "#"
     }
 ]
 
@@ -33,6 +40,7 @@ export default function FeaturedProjects() {
                     </div>
                 ))}
             </div>
+            <Link to="/projects" className="projects-link">Read more → Projects</Link>
         </section>
     )
 }

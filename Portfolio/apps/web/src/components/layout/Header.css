@@ -25,14 +25,23 @@
     backdrop-filter: blur(12px) saturate(160%);
     -webkit-backdrop-filter: blur(12px) saturate(160%);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    
-    /* The Magic: Scroll Animation */
-    animation: make-pill linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
     transition: all 0.3s ease;
   }
   
+  /* Pilled state (applied via JS on scroll) */
+  .pill-nav--pilled {
+    width: 90%;
+    max-width: 700px; /* Adjust this to fit your link count */
+    height: 54px;
+    margin-top: 15px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.06),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  }
+
   /* Link Styling */
   .nav-link {
     text-decoration: none;
@@ -54,22 +63,6 @@
     font-weight: 700;
     margin-right: auto; /* Pushes the rest of the links to the right */
     margin-left: 20px;
-  }
-  
-  /* THE PILL TRANSFORMATION */
-  @keyframes make-pill {
-    to {
-      width: 90%;
-      max-width: 700px; /* Adjust this to fit your link count */
-      height: 54px;
-      margin-top: 15px;
-      border-radius: 100px;
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.06),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-    }
   }
   
   /* Mobile Tweaks */

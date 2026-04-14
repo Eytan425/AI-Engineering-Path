@@ -10,7 +10,9 @@ const Hero = () => {
                 <Link to="/projects">
                     <button className="projects-button">View Projects</button>
                 </Link>
-                <button className="contact-button" >Contact Me</button>
+                <Link to="/contact">
+                    <button className="contact-button" >Contact Me</button>
+                </Link>
             </div>
         </div>
     )

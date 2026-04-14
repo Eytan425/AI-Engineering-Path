@@ -1,19 +1,46 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
+import { AnimatePresence, motion } from "framer-motion"
 import Header from "./components/layout/Header"
 import Footer from "./components/layout/Footer"
+import ScrollToTop from "./components/routing/ScrollToTop"
 import HomePage from "./pages/HomePage"
 import AboutPage from "./pages/AboutPage"
 import ProjectPage from "./pages/ProjectPage"
 
+// Animation settings: simple fade + slight slide
+const pageVariants = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -10 },
+}
+
 function App() {
+  const location = useLocation();
+
   return (
     <>
+      <ScrollToTop />
       <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects" element={<ProjectPage/>}/>
-      </Routes>
+      {/* mode="wait" ensures the outgoing page finishes its exit before the new one enters */}
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={
+            <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+              <HomePage />
+            </motion.div>
+          } />
+          <Route path="/about" element={
+            <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+              <AboutPage />
+            </motion.div>
+          } />
+          <Route path="/projects" element={
+            <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+              <ProjectPage />
+            </motion.div>
+          } />
+        </Routes>
+      </AnimatePresence>
       <Footer />
     </>
   )
