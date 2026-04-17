@@ -6,6 +6,7 @@ import ScrollToTop from "./components/routing/ScrollToTop"
 import HomePage from "./pages/HomePage"
 import AboutPage from "./pages/AboutPage"
 import ProjectPage from "./pages/ProjectPage"
+import ContactPage from "./pages/ContactPage"
 
 // Animation settings: simple fade + slight slide
 const pageVariants = {
@@ -37,6 +38,11 @@ function App() {
           <Route path="/projects" element={
             <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
               <ProjectPage />
+            </motion.div>
+          } />
+          <Route path="/contact" element={
+            <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+              <ContactPage />
             </motion.div>
           } />
         </Routes>
