@@ -1,6 +1,3 @@
-import { useEffect } from 'react';
-import "./ProjectPage.css"
-
 const projects = [
     {
         title: "DevLog",
@@ -128,39 +125,27 @@ const projects = [
         tags: ["React", "Firebase", "TypeScript"],
         github: "#"
     }
-];
+]
 
-export default function ProjectPage() {
-    useEffect(() => {
-        if ('scrollRestoration' in window.history) {
-            window.history.scrollRestoration = 'manual';
-        }
-        window.scrollTo(0, 0);
-    }, []);
 
+export default function ProjectPage(){ // AI
     return (
         <section className="featured-projects">
-            <div className="projects-page-shell">
-                <header className="projects-page-intro">
-                    <h1>Featured Projects</h1>
-                    <h2>A lot of ideas, but some are still under construction!</h2>
-                </header>
-
-                <div className="projects-grid">
-                    {projects.map((project) => (
-                        <div key={project.title} className="project-card">
-                            <h3>{project.title}</h3>
-                            <p>{project.description}</p>
-                            <div className="project-tags">
-                                {project.tags.map((tag) => (
-                                    <span key={tag} className="tag">{tag}</span>
-                                ))}
-                            </div>
-                            <a href={project.github} className="github-link">View on GitHub →</a>
+            <h2>Featured Projects</h2>
+            <div className="projects-grid">
+                {projects.map((project) => (
+                    <div key={project.title} className="project-card">
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <div className="project-tags">
+                            {project.tags.map((tag) => (
+                                <span key={tag} className="tag">{tag}</span>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                        <a href={project.github} className="github-link">View on GitHub →</a>
+                    </div>
+                ))}
             </div>
         </section>
-    );
+    )
 }
