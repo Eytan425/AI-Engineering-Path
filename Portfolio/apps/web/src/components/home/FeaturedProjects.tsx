@@ -24,23 +24,23 @@ const projects = [
 
 export default function FeaturedProjects() {
     return (
-        <section className="featured-projects">
+        <section className="home-featured-projects">
             <h2>Featured Projects</h2>
-            <div className="projects-grid">
+            <div className="home-projects-grid">
                 {projects.map((project) => (
-                    <div key={project.title} className="project-card">
+                    <div key={project.title} className="home-project-card">
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
-                        <div className="project-tags">
+                        <div className="home-project-tags">
                             {project.tags.map((tag) => (
-                                <span key={tag} className="tag">{tag}</span>
+                                <span key={tag} className="home-tag">{tag}</span>
                             ))}
                         </div>
-                        <a href={project.github} className="github-link">View on GitHub →</a>
+                        <a href={project.github} className="home-github-link">View on GitHub →</a>
                     </div>
                 ))}
             </div>
-            <Link to="/projects" className="projects-link">Read more → Projects</Link>
+            <Link to="/projects" className="home-projects-link">Read more → Projects</Link>
         </section>
     )
 }

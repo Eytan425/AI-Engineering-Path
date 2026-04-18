@@ -85,7 +85,8 @@
   margin-top: 8px;
 }
 
-input, textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 14px 18px;
   border: 1px solid #d2d2d7;
@@ -96,12 +97,13 @@ input, textarea {
   box-sizing: border-box;
 }
 
-input:focus, textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
   border-color: #0038b8;
 }
 
-textarea {
+.contact-form textarea {
   min-height: 160px;
   resize: vertical;
 }
