@@ -10,7 +10,7 @@ export default function TechStack() {
 
       <ul className="tech-stack-groups">
         <li>
-            <strong>Languages:</strong> Python, C, C#
+            <strong>Languages:</strong> Python, C, C#, C++
         </li>
         <li>
           <strong>Frontend:</strong> React, TypeScript, Vite, React Router

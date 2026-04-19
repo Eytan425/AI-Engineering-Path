@@ -3,16 +3,16 @@ import { Link } from "react-router-dom"
 
 const projects = [
     {
-        "title": "DevLog",
-        "description": "A personal developer journal app to track daily coding progress and goals.",
-        "tags": ["React", "TypeScript", "Firebase"],
-        "github": "#"
+        "title": "Timer App",
+        "description": "Full-stack time tracking app with authentication and clock in/out.",
+        "tags": ["HTML", "CSS", "JavaScript", "Node.js", "Express", "MongoDB", "Mongoose", "Nodemailer"],
+        "github": "https://github.com/Eytan425/Timer-App"
     },
     {
-        "title": "PathFinder",
-        "description": "A graph algorithm visualizer that animates BFS and DFS step by step.",
-        "tags": ["React", "TypeScript", "CSS Grid"],
-        "github": "#"
+        "title": "Eytan's Portfolio",
+        "description": "Personal portfolio showcasing projects and skills.",
+        "tags": ["React", "TypeScript", "CSS"],
+        "github": "https://github.com/Eytan425/AI-Engineering-Path/tree/main/Portfolio"
     },
     {
         "title": "MatrixLab",
