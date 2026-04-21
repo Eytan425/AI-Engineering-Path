@@ -22,6 +22,7 @@ function App() {
 
   return (
     <>
+      <title>Eytan's Portfolio</title>
       <ScrollToTop />
       <Header />
       {/* mode="wait" ensures the outgoing page finishes its exit before the new one enters */}

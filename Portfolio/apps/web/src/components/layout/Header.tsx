@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import "./Header.css"
 
+const PILL_SCROLL_THRESHOLD = 24
+
 const Header = () => {
   const [isPilled, setIsPilled] = useState(false)
+  const hasUserInteractedRef = useRef(false)
   const [dark, setDark] = useState<boolean>(
     localStorage.getItem("theme") === "dark"
   )
@@ -16,17 +19,53 @@ const Header = () => {
   }, [dark])
 
   useEffect(() => {
-    const onScroll = () => {
-      setIsPilled(window.scrollY > 10)
+    const markInteracted = () => {
+      hasUserInteractedRef.current = true
     }
 
-    onScroll()
+    const onKeyDown = (event: KeyboardEvent) => {
+      const scrollKeys = [
+        "ArrowDown",
+        "ArrowUp",
+        "PageDown",
+        "PageUp",
+        "Home",
+        "End",
+        " ",
+      ]
+
+      if (scrollKeys.includes(event.key)) {
+        markInteracted()
+      }
+    }
+
+    const onScroll = () => {
+      if (!hasUserInteractedRef.current) {
+        setIsPilled(false)
+        return
+      }
+
+      setIsPilled(window.scrollY > PILL_SCROLL_THRESHOLD)
+    }
+
+    window.addEventListener("wheel", markInteracted, { passive: true })
+    window.addEventListener("touchmove", markInteracted, { passive: true })
+    window.addEventListener("pointerdown", markInteracted, { passive: true })
+    window.addEventListener("keydown", onKeyDown)
     window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
+
+    return () => {
+      window.removeEventListener("wheel", markInteracted)
+      window.removeEventListener("touchmove", markInteracted)
+      window.removeEventListener("pointerdown", markInteracted)
+      window.removeEventListener("keydown", onKeyDown)
+      window.removeEventListener("scroll", onScroll)
+    }
   }, [])
 
   useEffect(() => {
     // Ensure the header resets when navigating.
+    hasUserInteractedRef.current = false
     setIsPilled(false)
   }, [pathname])
 
