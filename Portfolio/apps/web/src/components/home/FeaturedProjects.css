@@ -98,6 +98,45 @@
     }
 }
 
+/* Dark Mode Styles */
+body.dark .home-featured-projects {
+    background-color: #1a1a1a;
+}
+
+body.dark .home-featured-projects h2 {
+    color: #ffffff;
+}
+
+body.dark .home-project-card {
+    background-color: #242424;
+    border-color: #333333;
+}
+
+body.dark .home-project-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .home-project-card h3 {
+    color: #ffffff;
+}
+
+body.dark .home-project-card p {
+    color: #a1a1a6;
+}
+
+body.dark .home-tag {
+    color: #0a84ff;
+    background-color: rgba(10, 132, 255, 0.15);
+}
+
+body.dark .home-github-link {
+    color: #0a84ff;
+}
+
+body.dark .home-github-link:hover {
+    border-bottom-color: #0a84ff;
+}
+
 .home-projects-link {
     display: inline-block;
     width: fit-content;

@@ -59,4 +59,21 @@
       text-align: center;
     }
   }
-  
+
+  /* Dark Mode Styles */
+  body.dark .site-footer {
+    background: rgba(30, 30, 30, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  body.dark .footer-copy {
+    color: #a1a1a6;
+  }
+
+  body.dark .footer-link {
+    color: #e5e5e7;
+  }
+
+  body.dark .footer-link:hover {
+    opacity: 0.7;
+  }

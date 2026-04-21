@@ -1,4 +1,5 @@
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -8,8 +9,8 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Eytan&apos;s Portfolio. All rights reserved.
         </p>
         <nav className="footer-nav">
-          <a href="/privacy" className="footer-link">Privacy Policy</a>
-          <a href="/terms" className="footer-link">Terms of Service</a>
+          <Link to="/privacy" className="footer-link">Privacy Policy</Link>
+          <Link to="/terms" className="footer-link">Terms of Service</Link>
         </nav>
       </div>
     </footer>

@@ -103,6 +103,48 @@
   border-color: #0038b8;
 }
 
+/* Dark Mode Styles */
+body.dark .contact-page {
+  background-color: #0a0a0a;
+  background-image:
+    radial-gradient(at 100% 0%, hsla(225, 39%, 70%, 0.05) 0, transparent 48%),
+    radial-gradient(at 0% 72%, hsla(253, 16%, 60%, 0.04) 0, transparent 52%);
+}
+
+body.dark .contact-page-intro h1 {
+  color: #ffffff;
+}
+
+body.dark .blue-line-header {
+  color: #a1a1a6;
+}
+
+body.dark .contact-form-card {
+  background-color: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .form-group label {
+  color: #ffffff;
+}
+
+body.dark .form-hint {
+  color: #86868b;
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  border-color: #333333;
+  background-color: #242424;
+  color: #e5e5e7;
+}
+
+body.dark .contact-form input:focus,
+body.dark .contact-form textarea:focus {
+  border-color: #0a84ff;
+}
+
 .contact-form textarea {
   min-height: 160px;
   resize: vertical;

@@ -7,6 +7,8 @@ import HomePage from "./pages/HomePage"
 import AboutPage from "./pages/AboutPage"
 import ProjectPage from "./pages/ProjectPage"
 import ContactPage from "./pages/ContactPage"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+import TermsOfServices from "./pages/TermsOfServicePage"
 
 // Animation settings: simple fade + slight slide
 const pageVariants = {
@@ -43,6 +45,16 @@ function App() {
           <Route path="/contact" element={
             <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
               <ContactPage />
+            </motion.div>
+          } />
+          <Route path="/privacy" element={
+            <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+              <PrivacyPolicy />
+            </motion.div>
+          } />
+          <Route path="/terms" element={
+            <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>
+              <TermsOfServices />
             </motion.div>
           } />
         </Routes>

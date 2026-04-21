@@ -42,3 +42,25 @@
         padding: 36px 30px 28px;
     }
 }
+
+/* Dark Mode Styles */
+body.dark .about-teaser {
+    background-color: #0a0a0a;
+}
+
+body.dark .about-teaser h2 {
+    color: #ffffff;
+}
+
+body.dark .about-teaser p {
+    color: #a1a1a6;
+}
+
+body.dark .about-link {
+    color: #0a84ff;
+}
+
+body.dark .about-link:hover {
+    color: #5ac8ff;
+    border-bottom-color: #0a84ff;
+}

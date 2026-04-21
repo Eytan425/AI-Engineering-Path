@@ -66,3 +66,34 @@
       text-align: center;              /* reads nicer on narrow screens */
     }
   }
+
+  /* Dark Mode Styles */
+  body.dark .tech-stack {
+    background-color: #0a0a0a;
+  }
+
+  body.dark .tech-stack h2 {
+    color: #ffffff;
+  }
+
+  body.dark .tech-stack-intro {
+    color: #a1a1a6;
+  }
+
+  body.dark .tech-stack-groups li {
+    background: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #e5e5e7;
+  }
+
+  body.dark .tech-stack-groups strong {
+    color: #0a84ff;
+  }
+
+  body.dark .tech-stack-learning {
+    color: #86868b;
+  }
+
+  body.dark .tech-stack-learning strong {
+    color: #ffffff;
+  }

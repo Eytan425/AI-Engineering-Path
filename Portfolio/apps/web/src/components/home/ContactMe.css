@@ -85,3 +85,44 @@
       text-align: center;
     }
   }
+
+  /* Dark Mode Styles */
+  body.dark .contact-me {
+    background-color: #1a1a1a;
+  }
+
+  body.dark .contact-me h2 {
+    color: #ffffff;
+  }
+
+  body.dark .contact-me-intro {
+    color: #a1a1a6;
+  }
+
+  body.dark .contact-info li {
+    background: #242424;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #e5e5e7;
+  }
+
+  body.dark .contact-info strong {
+    color: #0a84ff;
+  }
+
+  body.dark .contact-info a {
+    color: #0a84ff;
+  }
+
+  body.dark .contact-info a:hover {
+    border-bottom-color: #0a84ff;
+    opacity: 0.8;
+  }
+
+  body.dark .contact-link {
+    color: #0a84ff;
+  }
+
+  body.dark .contact-link:hover {
+    color: #5ac8ff;
+    border-bottom-color: #0a84ff;
+  }

@@ -127,3 +127,50 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Dark Mode Styles */
+body.dark .featured-projects {
+    background-color: #0a0a0a;
+    background-image:
+        radial-gradient(at 100% 0%, hsla(225, 39%, 70%, 0.05) 0, transparent 48%),
+        radial-gradient(at 0% 72%, hsla(253, 16%, 60%, 0.04) 0, transparent 52%);
+}
+
+body.dark .featured-projects h1 {
+    color: #ffffff;
+}
+
+body.dark .featured-projects h2 {
+    color: #a1a1a6;
+}
+
+body.dark .project-card {
+    background-color: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .project-card:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .project-card h3 {
+    color: #ffffff;
+}
+
+body.dark .project-card p {
+    color: #a1a1a6;
+}
+
+body.dark .tag {
+    color: #0a84ff;
+    background-color: rgba(10, 132, 255, 0.15);
+}
+
+body.dark .github-link {
+    color: #0a84ff;
+}
+
+body.dark .github-link:hover {
+    border-bottom-color: #0a84ff;
+}

@@ -2,3 +2,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Dark Mode Global Styles */
+body.dark {
+  background-color: #0a0a0a;
+  color: #e5e5e7;
+}
+
+body.dark * {
+  color-scheme: dark;
+}
+
+body.dark button {
+  color: #e5e5e7;
+}
+
+body.dark a {
+  color: #0a84ff;
+}
+
+body.dark a:visited {
+  color: #5856d6;
+}
+
