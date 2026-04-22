@@ -8,7 +8,7 @@ export default function AboutPage() {
           <h1>About Me</h1>
 
           <h2>
-            Focused on building scalable software systems and advancing toward AI infrastructure.
+            Focused on building scalable software systems and advancing towards AI infrastructure.
           </h2>
         </header>
 

@@ -4,8 +4,8 @@ const Hero = () => {
     return (
         <div className="hero">
             <h1>Eytan Benittah</h1>
-            <h2>Software engineering student: Technion - Israel Institute of Technology</h2>
-            <p>Outside the classroom I train calisthenics, build things with code, and study Torah—I'm happiest when I'm deep in tech and learning something new.</p>
+            <h2>Software Engineering student: Technion - Israel Institute of Technology</h2>
+            <p>Outside the classroom I train calisthenics, build things with code, and love to learn new technologies — I'm happiest when I'm deep in tech and learning something new.</p>
             <div className="hero-buttons">
                 <Link to="/projects">
                     <button className="projects-button">View Projects</button>
