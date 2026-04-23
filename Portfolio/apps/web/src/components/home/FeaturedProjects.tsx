@@ -1,3 +1,4 @@
+import { useState } from "react"
 import "./FeaturedProjects.css"
 import { Link } from "react-router-dom"
 
@@ -23,9 +24,27 @@ const projects = [
 ]
 
 export default function FeaturedProjects() {
+    const [isOpen, setIsOpen] = useState<boolean>(true);
+
+    const closePopup = () => setIsOpen(false);
     return (
         <section className="home-featured-projects">
             <h2>Featured Projects</h2>
+            {isOpen && (
+                <div className="home-projects-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="projects-popup-title">
+                    <div className="home-projects-popup-content">
+                        <h3 id="projects-popup-title">A quick note before you explore</h3>
+                        <p>
+                            These projects are currently curated placeholders while I finalize live demos and full repositories.
+                            The complete case studies are coming soon.
+                        </p>
+                        <button type="button" className="home-projects-popup-close" onClick={closePopup}>
+                            Continue
+                        </button>
+                    </div>
+                </div>
+            )}
+            
             <div className="home-projects-grid">
                 {projects.map((project) => (
                     <div key={project.title} className="home-project-card">
