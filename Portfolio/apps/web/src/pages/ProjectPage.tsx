@@ -9,6 +9,12 @@ const projects = [
         github: "#"
     },
     {
+        title: "Portfolio",
+        description: "My personal developer portfolio showcasing projects, skills, and contact info — built and deployed as a single-page app.",
+        tags: ["React", "TypeScript", "Vite"],
+        github: "#"
+    },
+    {
         title: "PathFinder",
         description: "A graph algorithm visualizer that animates BFS and DFS step by step.",
         tags: ["React", "TypeScript", "CSS Grid"],
